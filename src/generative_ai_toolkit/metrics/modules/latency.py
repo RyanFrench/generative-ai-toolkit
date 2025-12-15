@@ -42,6 +42,8 @@ class LatencyMetric(BaseMetric):
             dimensions.append({"ConversationHistory": "add-message"})
         elif trace_type in {"converse", "converse-stream"}:
             dimensions.append({"Converse": trace_type})
+        elif trace_type == "cycle":
+            dimensions.append({"Cycle": "agent-cycle"})
         else:
             logger.warn("Unknown trace type", trace_type=trace_type)
 
