@@ -13,7 +13,6 @@
 # limitations under the License.
 
 from generative_ai_toolkit.metrics import BaseMetric, Measurement, Unit
-from generative_ai_toolkit.utils.logging import logger
 
 
 class LatencyMetric(BaseMetric):
